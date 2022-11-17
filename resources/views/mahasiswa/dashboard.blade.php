@@ -18,7 +18,7 @@
     <div class="callout callout-info">
         <h4>Selamat Datang, <b>{{ Session::get('nama_lengkap') }}</b></h4>
         <p>
-            Laboratorium Budidaya Pertanian adalah aplikasi manajemen yang digunakan untuk mengakomodir kegiatan laboratorium baik praktikum ataupu peminjaman alat laboratorium, serta pencatatan barang laboratorium. Semua kegiatan laboratorium akan dijalankan secara online
+            Laboratorium Program Studi Agronomi adalah aplikasi manajemen yang digunakan untuk mengakomodir kegiatan laboratorium baik praktikum ataupu peminjaman alat laboratorium, serta pencatatan barang laboratorium. Semua kegiatan laboratorium akan dijalankan secara online
             <br>
             <i><b>Catatan</b>: Untuk keamanan, silahkan keluar setelah selesai menggunakan aplikasi</i>
         </p>

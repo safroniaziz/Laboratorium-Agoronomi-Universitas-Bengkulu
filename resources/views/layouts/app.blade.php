@@ -136,7 +136,7 @@
     <section class="content-header">
       <h1>
         Laboratorium Agronomi, Universitas Bengkulu
-        <small>Laboratorium Online Budidaya Pertanian</small>
+        <small>Laboratorium Online Program Studi Agronomi</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Laboratorium Agronomi UNIB</a></li>
@@ -156,7 +156,7 @@
 
   <footer class="main-footer ">
     <div class="pull-right hidden-xs">
-      <a href="" target="_blank"><b>Budidaya Pertanian Universitas Bengkulu</b></a>
+      <a href="" target="_blank"><b>Program Studi Agronomi, Fakultas Pertanian, Universitas Bengkulu</b></a>
     </div>
     <strong>Copyright &copy; 2022 <a href="">Laboratorium Agronomi UNIB</a>.</strong> All rights
     reserved.
