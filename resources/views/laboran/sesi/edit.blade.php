@@ -77,42 +77,45 @@
                         @endif
                     </div>
 
-                    <form action="{{ route('laboran.jadwal.update',[$data->id]) }}" enctype="multipart/form-data" method="POST">
+                    <form action="{{ route('laboran.sesi.update',[$jadwal_id,$data->id]) }}" enctype="multipart/form-data" method="POST">
                         {{ csrf_field() }} {{ method_field('PATCH') }}
                         <div class="form-group col-md-6">
-                            <label for="exampleInputEmail1">Pilih Mata Kuliah</label>
-                            <select name="mata_kuliah_id" id="" class="form-control">
-                                <option disabled selected>-- pilih matkul --</option>
-                                @foreach ($matkuls as $matkul)
-                                    <option value="{{ $matkul->id }}" @if ($matkul->id == $data->mata_kuliah_id)
-                                        selected
-                                    @endif>{{ $matkul->nama_mata_kuliah }} ({{ $matkul->prodi->nama_prodi }})</option>
-                                @endforeach
-                            </select>
+                            <label for="exampleInputEmail1">Nama Sesi</label>
+                            <input type="text" name="sesi" value="{{ $data->sesi }}" class="form-control" >
                             <div>
-                                @if ($errors->has('mata_kuliah_id'))
-                                    <small class="form-text text-danger">{{ $errors->first('mata_kuliah_id') }}</small>
+                                @if ($errors->has('sesi'))
+                                    <small class="form-text text-danger">{{ $errors->first('sesi') }}</small>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label>Tanggal Praktikum</label>
-                            <div class="input-group date">
-                                <input type="text" value="{{ $data->tanggal_praktikum }}" name="tanggal_praktikum" id="tanggal_praktikum" class="form-control pull-right">
+                            <label for="exampleInputEmail1">Jumlah Peserta Maksimal</label>
+                            <input type="text" name="jumlah_peserta" value="{{ $data->jumlah_peserta }}" class="form-control" >
+                            <div>
+                                @if ($errors->has('jumlah_peserta'))
+                                    <small class="form-text text-danger">{{ $errors->first('jumlah_peserta') }}</small>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6 bootstrap-timepicker">
+                            <label for="">Jam Mulai</label>
+                            <div class="input-group">
+                                <input type="text" name="jam_mulai" value="{{ $data->jam_mulai }}" id="jam_mulai" class="form-control timepicker">
                                 <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
+                                    <i class="fa fa-clock-o"></i>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group col-md-6">
-                            <label for="exampleInputEmail1">Jumlah Sesi</label>
-                            <input type="number" name="jumlah_sesi" value="{{ $data->jumlah_sesi }}"class="form-control" >
-                            <div>
-                                @if ($errors->has('jumlah_sesi'))
-                                    <small class="form-text text-danger">{{ $errors->first('jumlah_sesi') }}</small>
-                                @endif
+                        <div class="form-group col-md-6 bootstrap-timepicker">
+                            <label for="">Jam Selesai</label>
+                            <div class="input-group">
+                                <input type="text" name="jam_selesai" value="{{ $data->jam_selesai }}" id="jam_selesai" class="form-control timepicker">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
                             </div>
                         </div>
 
